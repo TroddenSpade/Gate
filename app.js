@@ -37,6 +37,7 @@ app.get('/', async (req, res) => {
 
     json_out = CSVtoJSON(csv_str)
 
+    res.set('Access-Control-Allow-Origin', '*');
     res.send(json_out);
 });
 
