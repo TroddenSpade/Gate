@@ -13,9 +13,9 @@ const CSVtoJSON = csv => {
     const columns = lines[1].split(',');
 
     let result = []
-    let i = 0
+    let id = 0
     for(let i=2; i<lines.length; i++){
-        let obj = {"id": i++}
+        let obj = {"id": id++}
         let values = lines[i].split(',')
         for(let j=0; j<columns.length; j++){
             obj[columns[j]] = values[j]
